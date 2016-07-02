@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		FAD452CE1D28587000217BB2 /* Whiteboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD452C31D28587000217BB2 /* Whiteboard.framework */; };
+		FAD453121D285B0A00217BB2 /* CreateWhiteboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453101D285B0A00217BB2 /* CreateWhiteboardTests.swift */; };
+		FAD453191D285BFB00217BB2 /* Gui.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453181D285BFB00217BB2 /* Gui.swift */; };
+		FAD4531A1D285C0600217BB2 /* Gui.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453181D285BFB00217BB2 /* Gui.swift */; };
+		FAD4531C1D285C1D00217BB2 /* WhiteboardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4531B1D285C1D00217BB2 /* WhiteboardRepository.swift */; };
+		FAD4531D1D285C1D00217BB2 /* WhiteboardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4531B1D285C1D00217BB2 /* WhiteboardRepository.swift */; };
+		FAD4531F1D285C8100217BB2 /* Whiteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4531E1D285C8100217BB2 /* Whiteboard.swift */; };
+		FAD453201D285C8100217BB2 /* Whiteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4531E1D285C8100217BB2 /* Whiteboard.swift */; };
+		FAD453221D285C9E00217BB2 /* CreateWhiteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453211D285C9E00217BB2 /* CreateWhiteboard.swift */; };
+		FAD453231D285C9E00217BB2 /* CreateWhiteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453211D285C9E00217BB2 /* CreateWhiteboard.swift */; };
+		FAD453251D285CD800217BB2 /* WhiteboardRepositoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453241D285CD800217BB2 /* WhiteboardRepositoryFake.swift */; };
+		FAD453261D285CD800217BB2 /* WhiteboardRepositoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453241D285CD800217BB2 /* WhiteboardRepositoryFake.swift */; };
+		FAD453281D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453271D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift */; };
+		FAD4532A1D285D7200217BB2 /* WhiteboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453291D285D7200217BB2 /* WhiteboardTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +38,14 @@
 		FAD452C81D28587000217BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD452CD1D28587000217BB2 /* WhiteboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD452D41D28587000217BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD453101D285B0A00217BB2 /* CreateWhiteboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWhiteboardTests.swift; sourceTree = "<group>"; };
+		FAD453181D285BFB00217BB2 /* Gui.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gui.swift; sourceTree = "<group>"; };
+		FAD4531B1D285C1D00217BB2 /* WhiteboardRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardRepository.swift; sourceTree = "<group>"; };
+		FAD4531E1D285C8100217BB2 /* Whiteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Whiteboard.swift; sourceTree = "<group>"; };
+		FAD453211D285C9E00217BB2 /* CreateWhiteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWhiteboard.swift; sourceTree = "<group>"; };
+		FAD453241D285CD800217BB2 /* WhiteboardRepositoryFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardRepositoryFake.swift; sourceTree = "<group>"; };
+		FAD453271D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardRepositoryFakeTests.swift; sourceTree = "<group>"; };
+		FAD453291D285D7200217BB2 /* WhiteboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +88,9 @@
 		FAD452C51D28587000217BB2 /* Whiteboard */ = {
 			isa = PBXGroup;
 			children = (
+				FAD453131D285B5300217BB2 /* DependencyProtocols */,
+				FAD453141D285B6600217BB2 /* Entities */,
+				FAD453151D285B6F00217BB2 /* UseCases */,
 				FAD452C81D28587000217BB2 /* Info.plist */,
 			);
 			path = Whiteboard;
@@ -75,9 +99,62 @@
 		FAD452D11D28587000217BB2 /* WhiteboardTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAD453161D285BA000217BB2 /* Entities */,
+				FAD453171D285BB100217BB2 /* Fakes */,
+				FAD4530F1D285AEC00217BB2 /* UseCases */,
 				FAD452D41D28587000217BB2 /* Info.plist */,
 			);
 			path = WhiteboardTests;
+			sourceTree = "<group>";
+		};
+		FAD4530F1D285AEC00217BB2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				FAD453101D285B0A00217BB2 /* CreateWhiteboardTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		FAD453131D285B5300217BB2 /* DependencyProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAD453181D285BFB00217BB2 /* Gui.swift */,
+				FAD4531B1D285C1D00217BB2 /* WhiteboardRepository.swift */,
+			);
+			path = DependencyProtocols;
+			sourceTree = "<group>";
+		};
+		FAD453141D285B6600217BB2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4531E1D285C8100217BB2 /* Whiteboard.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FAD453151D285B6F00217BB2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				FAD453211D285C9E00217BB2 /* CreateWhiteboard.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		FAD453161D285BA000217BB2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FAD453291D285D7200217BB2 /* WhiteboardTests.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FAD453171D285BB100217BB2 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				FAD453241D285CD800217BB2 /* WhiteboardRepositoryFake.swift */,
+				FAD453271D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift */,
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +218,12 @@
 				TargetAttributes = {
 					FAD452C21D28587000217BB2 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					FAD452CC1D28587000217BB2 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -189,6 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD4531C1D285C1D00217BB2 /* WhiteboardRepository.swift in Sources */,
+				FAD453191D285BFB00217BB2 /* Gui.swift in Sources */,
+				FAD453221D285C9E00217BB2 /* CreateWhiteboard.swift in Sources */,
+				FAD4531F1D285C8100217BB2 /* Whiteboard.swift in Sources */,
+				FAD453251D285CD800217BB2 /* WhiteboardRepositoryFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD453201D285C8100217BB2 /* Whiteboard.swift in Sources */,
+				FAD453261D285CD800217BB2 /* WhiteboardRepositoryFake.swift in Sources */,
+				FAD453281D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift in Sources */,
+				FAD453121D285B0A00217BB2 /* CreateWhiteboardTests.swift in Sources */,
+				FAD4532A1D285D7200217BB2 /* WhiteboardTests.swift in Sources */,
+				FAD4531D1D285C1D00217BB2 /* WhiteboardRepository.swift in Sources */,
+				FAD4531A1D285C0600217BB2 /* Gui.swift in Sources */,
+				FAD453231D285C9E00217BB2 /* CreateWhiteboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +397,7 @@
 		FAD452D81D28587000217BB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -318,6 +411,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -325,6 +419,7 @@
 		FAD452D91D28587000217BB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -345,11 +440,14 @@
 		FAD452DB1D28587000217BB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = WhiteboardTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.WhiteboardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -357,11 +455,13 @@
 		FAD452DC1D28587000217BB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = WhiteboardTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.WhiteboardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
