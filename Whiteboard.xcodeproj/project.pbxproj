@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FAD452C71D28587000217BB2 /* Whiteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD452C61D28587000217BB2 /* Whiteboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAD452CE1D28587000217BB2 /* Whiteboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD452C31D28587000217BB2 /* Whiteboard.framework */; };
-		FAD452D31D28587000217BB2 /* WhiteboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD452D21D28587000217BB2 /* WhiteboardTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,10 +22,8 @@
 
 /* Begin PBXFileReference section */
 		FAD452C31D28587000217BB2 /* Whiteboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Whiteboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAD452C61D28587000217BB2 /* Whiteboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Whiteboard.h; sourceTree = "<group>"; };
 		FAD452C81D28587000217BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD452CD1D28587000217BB2 /* WhiteboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAD452D21D28587000217BB2 /* WhiteboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteboardTests.swift; sourceTree = "<group>"; };
 		FAD452D41D28587000217BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +67,6 @@
 		FAD452C51D28587000217BB2 /* Whiteboard */ = {
 			isa = PBXGroup;
 			children = (
-				FAD452C61D28587000217BB2 /* Whiteboard.h */,
 				FAD452C81D28587000217BB2 /* Info.plist */,
 			);
 			path = Whiteboard;
@@ -80,7 +75,6 @@
 		FAD452D11D28587000217BB2 /* WhiteboardTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAD452D21D28587000217BB2 /* WhiteboardTests.swift */,
 				FAD452D41D28587000217BB2 /* Info.plist */,
 			);
 			path = WhiteboardTests;
@@ -93,7 +87,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD452C71D28587000217BB2 /* Whiteboard.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +196,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD452D31D28587000217BB2 /* WhiteboardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.Whiteboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -344,6 +337,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.Whiteboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
