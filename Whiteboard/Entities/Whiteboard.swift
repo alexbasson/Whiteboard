@@ -1,8 +1,8 @@
-public class Whiteboard {
-    let name: String
+public final class Whiteboard {
+    public let name: String
     var id: String?
 
-    init(name: String) {
+    public init(name: String) {
         self.name = name
     }
 
