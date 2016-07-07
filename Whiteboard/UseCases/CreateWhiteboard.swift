@@ -1,8 +1,8 @@
 public func createWhiteboard(name: String, gui: Gui, repo: WhiteboardRepository) {
     if (name == "") {
-        gui.validationFailed(errors: [WhiteboardError.Validation(field: "name", validation: "required")])
+        gui.validationFailed(errors: [WhiteboardError.Validation(field: .Name, validation: .Required)])
     } else if (repo.find(name: name) != nil) {
-        gui.validationFailed(errors: [WhiteboardError.Validation(field: "name", validation: "unique")])
+        gui.validationFailed(errors: [WhiteboardError.Validation(field: .Name, validation: .Unique)])
     } else {
         let whiteboard = Whiteboard(name: name)
         repo.save(whiteboard)

@@ -25,7 +25,7 @@ class CreateWhiteboardTests: XCTestCase {
     func testItRequiresAName() {
         createWhiteboard(name: "", gui: gui, repo: repo)
 
-        let requiredNameError = WhiteboardError.Validation(field: "name", validation: "required")
+        let requiredNameError = WhiteboardError.Validation(field: .Name, validation: .Required)
         XCTAssertEqual(gui.spyValidationErrors, [requiredNameError])
     }
 
@@ -33,7 +33,7 @@ class CreateWhiteboardTests: XCTestCase {
         createWhiteboard(name: "valid name", gui: gui, repo: repo)
         createWhiteboard(name: "valid name", gui: gui, repo: repo)
 
-        let uniqueNameError = WhiteboardError.Validation(field: "name", validation: "unique")
+        let uniqueNameError = WhiteboardError.Validation(field: .Name, validation: .Unique)
         XCTAssertEqual(gui.spyValidationErrors, [uniqueNameError])
     }
 

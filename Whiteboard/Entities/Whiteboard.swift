@@ -18,8 +18,36 @@ public func ==(lhs: Whiteboard, rhs: Whiteboard) -> Bool {
     return lhs.id == rhs.id && lhs.name == rhs.name
 }
 
+public enum WhiteboardField {
+    case Name
+}
+
+extension WhiteboardField: Equatable {}
+
+public func ==(lhs: WhiteboardField, rhs: WhiteboardField) -> Bool {
+    return true
+}
+
+public enum ValidationConstraint {
+    case Required
+    case Unique
+}
+
+extension ValidationConstraint: Equatable {}
+
+public func==(lhs: ValidationConstraint, rhs: ValidationConstraint) -> Bool {
+    switch (lhs, rhs) {
+    case (.Required, .Required):
+        return true
+    case (.Unique, .Unique):
+        return true
+    default:
+        return false
+    }
+}
+
 public enum WhiteboardError: ErrorProtocol {
-    case Validation(field: String, validation: String)
+    case Validation(field: WhiteboardField, validation: ValidationConstraint)
     case Update
     case Destroy
 }
