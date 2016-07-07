@@ -13,12 +13,12 @@ class WhiteboardTests: XCTestCase {
     }
 }
 
-class WhiteboardValidationErrorTests: XCTestCase {
-    func testEquatable() {
-        let error = WhiteboardValidationError(field: "field", validation: "validation")
-        let equalError = WhiteboardValidationError(field: "field", validation: "validation")
-        let unequalByFieldError = WhiteboardValidationError(field: "unequal field", validation: "validation")
-        let unequalByValidationError = WhiteboardValidationError(field: "field", validation: "unequal validation")
+class WhiteboardErrorTests: XCTestCase {
+    func testValidationEquatable() {
+        let error = WhiteboardError.Validation(field: "field", validation: "validation")
+        let equalError = WhiteboardError.Validation(field: "field", validation: "validation")
+        let unequalByFieldError = WhiteboardError.Validation(field: "unequal field", validation: "validation")
+        let unequalByValidationError = WhiteboardError.Validation(field: "field", validation: "unequal validation")
 
         XCTAssertEqual(error, equalError)
         XCTAssertNotEqual(error, unequalByFieldError)

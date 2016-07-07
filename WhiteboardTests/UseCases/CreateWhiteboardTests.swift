@@ -1,10 +1,10 @@
 import XCTest
 
 class GuiSpy: Gui {
-    var spyValidationErrors: [WhiteboardValidationError] = []
+    var spyValidationErrors: [WhiteboardError] = []
     var spyCreatedWhiteboardId: String?
 
-    func validationFailed(errors: [WhiteboardValidationError]) {
+    func validationFailed(errors: [WhiteboardError]) {
         spyValidationErrors = errors
     }
 
@@ -25,7 +25,7 @@ class CreateWhiteboardTests: XCTestCase {
     func testItRequiresAName() {
         createWhiteboard(name: "", gui: gui, repo: repo)
 
-        let requiredNameError = WhiteboardValidationError(field: "name", validation: "required")
+        let requiredNameError = WhiteboardError.Validation(field: "name", validation: "required")
         XCTAssertEqual(gui.spyValidationErrors, [requiredNameError])
     }
 
@@ -33,7 +33,7 @@ class CreateWhiteboardTests: XCTestCase {
         createWhiteboard(name: "valid name", gui: gui, repo: repo)
         createWhiteboard(name: "valid name", gui: gui, repo: repo)
 
-        let uniqueNameError = WhiteboardValidationError(field: "name", validation: "unique")
+        let uniqueNameError = WhiteboardError.Validation(field: "name", validation: "unique")
         XCTAssertEqual(gui.spyValidationErrors, [uniqueNameError])
     }
 

@@ -18,19 +18,23 @@ public func ==(lhs: Whiteboard, rhs: Whiteboard) -> Bool {
     return lhs.id == rhs.id && lhs.name == rhs.name
 }
 
-public struct WhiteboardValidationError {
-    public let field: String
-    public let validation: String
+public enum WhiteboardError: ErrorProtocol {
+    case Validation(field: String, validation: String)
+    case Update
+    case Destroy
+}
 
-    public init(field: String, validation: String) {
-        self.field = field
-        self.validation = validation
+extension WhiteboardError: Equatable {}
+
+public func ==(lhs: WhiteboardError, rhs: WhiteboardError) -> Bool {
+    switch(lhs, rhs) {
+    case (let .Validation(field1, validation1), let .Validation(field2, validation2)):
+        return field1 == field2 && validation1 == validation2
+    case (.Update, .Update):
+        return true
+    case (.Destroy, .Destroy):
+        return true
+    default:
+        return false
     }
 }
-
-extension WhiteboardValidationError: Equatable {}
-
-public func ==(lhs: WhiteboardValidationError, rhs: WhiteboardValidationError) -> Bool {
-    return lhs.field == rhs.field && lhs.validation == rhs.validation
-}
-
