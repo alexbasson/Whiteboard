@@ -7,7 +7,7 @@ public class WhiteboardRepositoryFake: WhiteboardRepository {
         self.whiteboards = []
     }
 
-    public func findByName(name: String) -> Whiteboard? {
+    public func find(name: String) -> Whiteboard? {
         return whiteboards.filter({ $0.name == name }).first
     }
 

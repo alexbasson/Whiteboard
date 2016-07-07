@@ -59,13 +59,13 @@ class WhiteboardRepositoryTests: XCTestCase {
 
     func testItFindsByName() {
         if let repo = repo {
-            if let foundWhiteboard = repo.findByName(name: ny.name) {
+            if let foundWhiteboard = repo.find(name: ny.name) {
                 XCTAssertEqual(foundWhiteboard, ny)
             } else {
                 XCTFail()
             }
 
-            if let foundWhiteboard = repo.findByName(name: sf.name) {
+            if let foundWhiteboard = repo.find(name: sf.name) {
                 XCTAssertEqual(foundWhiteboard, sf)
             } else {
                 XCTFail()
