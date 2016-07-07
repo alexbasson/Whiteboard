@@ -11,6 +11,10 @@ public class WhiteboardRepositoryFake: WhiteboardRepository {
         return whiteboards.filter({ $0.name == name }).first
     }
 
+    public func find(id: String) -> Whiteboard? {
+        return whiteboards.filter({ $0.id == id }).first
+    }
+
     public func save(_ whiteboard: Whiteboard) {
         whiteboard.id = NSUUID().uuidString
         whiteboards.append(whiteboard)

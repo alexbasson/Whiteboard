@@ -80,4 +80,14 @@ class WhiteboardRepositoryTests: XCTestCase {
             XCTAssertNotEqual(ny.id, sf.id)
         }
     }
+
+    func testItFindsByID() {
+        if let repo = repo {
+            var foundWhiteboard = repo.find(id: ny.id!)!
+            XCTAssertEqual(foundWhiteboard, ny)
+
+            foundWhiteboard = repo.find(id: sf.id!)!
+            XCTAssertEqual(foundWhiteboard, sf)
+        }
+    }
 }
