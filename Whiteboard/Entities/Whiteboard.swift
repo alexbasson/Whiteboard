@@ -1,6 +1,6 @@
 public final class Whiteboard {
     public let name: String
-    var id: String?
+    public var id: String?
 
     public init(name: String) {
         self.name = name
