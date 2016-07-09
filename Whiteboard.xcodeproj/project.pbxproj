@@ -21,6 +21,7 @@
 		FAD453261D285CD800217BB2 /* WhiteboardRepositoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453241D285CD800217BB2 /* WhiteboardRepositoryFake.swift */; };
 		FAD453281D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453271D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift */; };
 		FAD4532A1D285D7200217BB2 /* WhiteboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453291D285D7200217BB2 /* WhiteboardTests.swift */; };
+		FAD740871D308AB800A383BA /* WhiteboardRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD740861D308AB800A383BA /* WhiteboardRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		FAD453241D285CD800217BB2 /* WhiteboardRepositoryFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardRepositoryFake.swift; sourceTree = "<group>"; };
 		FAD453271D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardRepositoryFakeTests.swift; sourceTree = "<group>"; };
 		FAD453291D285D7200217BB2 /* WhiteboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardTests.swift; sourceTree = "<group>"; };
+		FAD740861D308AB800A383BA /* WhiteboardRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				FAD452C51D28587000217BB2 /* Whiteboard */,
 				FAD452D11D28587000217BB2 /* WhiteboardTests */,
 				FAD452C41D28587000217BB2 /* Products */,
+				FAD7407F1D30897D00A383BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,7 +91,7 @@
 		FAD452C51D28587000217BB2 /* Whiteboard */ = {
 			isa = PBXGroup;
 			children = (
-				FAD453131D285B5300217BB2 /* DependencyProtocols */,
+				FAD453131D285B5300217BB2 /* Contracts */,
 				FAD453141D285B6600217BB2 /* Entities */,
 				FAD453151D285B6F00217BB2 /* UseCases */,
 				FAD452C81D28587000217BB2 /* Info.plist */,
@@ -99,6 +102,7 @@
 		FAD452D11D28587000217BB2 /* WhiteboardTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAD740851D308A9F00A383BA /* Contracts */,
 				FAD453161D285BA000217BB2 /* Entities */,
 				FAD453171D285BB100217BB2 /* Fakes */,
 				FAD4530F1D285AEC00217BB2 /* UseCases */,
@@ -115,13 +119,13 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		FAD453131D285B5300217BB2 /* DependencyProtocols */ = {
+		FAD453131D285B5300217BB2 /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
 				FAD453181D285BFB00217BB2 /* Gui.swift */,
 				FAD4531B1D285C1D00217BB2 /* WhiteboardRepository.swift */,
 			);
-			path = DependencyProtocols;
+			path = Contracts;
 			sourceTree = "<group>";
 		};
 		FAD453141D285B6600217BB2 /* Entities */ = {
@@ -155,6 +159,21 @@
 				FAD453271D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift */,
 			);
 			path = Fakes;
+			sourceTree = "<group>";
+		};
+		FAD7407F1D30897D00A383BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAD740851D308A9F00A383BA /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				FAD740861D308AB800A383BA /* WhiteboardRepositoryTests.swift */,
+			);
+			path = Contracts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD453201D285C8100217BB2 /* Whiteboard.swift in Sources */,
+				FAD740871D308AB800A383BA /* WhiteboardRepositoryTests.swift in Sources */,
 				FAD453261D285CD800217BB2 /* WhiteboardRepositoryFake.swift in Sources */,
 				FAD453281D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift in Sources */,
 				FAD453121D285B0A00217BB2 /* CreateWhiteboardTests.swift in Sources */,
@@ -490,6 +510,7 @@
 				FAD452D91D28587000217BB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAD452DA1D28587000217BB2 /* Build configuration list for PBXNativeTarget "WhiteboardTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +519,7 @@
 				FAD452DC1D28587000217BB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
