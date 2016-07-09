@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5037331D313F610039E245 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5037321D313F610039E245 /* XCTest.framework */; };
 		FAD452CE1D28587000217BB2 /* Whiteboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD452C31D28587000217BB2 /* Whiteboard.framework */; };
 		FAD453121D285B0A00217BB2 /* CreateWhiteboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453101D285B0A00217BB2 /* CreateWhiteboardTests.swift */; };
 		FAD453191D285BFB00217BB2 /* Gui.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453181D285BFB00217BB2 /* Gui.swift */; };
@@ -21,7 +22,9 @@
 		FAD453261D285CD800217BB2 /* WhiteboardRepositoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453241D285CD800217BB2 /* WhiteboardRepositoryFake.swift */; };
 		FAD453281D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453271D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift */; };
 		FAD4532A1D285D7200217BB2 /* WhiteboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD453291D285D7200217BB2 /* WhiteboardTests.swift */; };
-		FAD740871D308AB800A383BA /* WhiteboardRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD740861D308AB800A383BA /* WhiteboardRepositoryTests.swift */; };
+		FAD740B81D31339E00A383BA /* WhiteboardRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD740B71D31339E00A383BA /* WhiteboardRepositoryTests.swift */; };
+		FAD740C11D31382200A383BA /* Whiteboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD452C31D28587000217BB2 /* Whiteboard.framework */; };
+		FAD740C31D31386400A383BA /* WhiteboardRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD740B71D31339E00A383BA /* WhiteboardRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA5037321D313F610039E245 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XCTest.framework; sourceTree = "<group>"; };
 		FAD452C31D28587000217BB2 /* Whiteboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Whiteboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD452C81D28587000217BB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD452CD1D28587000217BB2 /* WhiteboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +51,9 @@
 		FAD453241D285CD800217BB2 /* WhiteboardRepositoryFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardRepositoryFake.swift; sourceTree = "<group>"; };
 		FAD453271D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardRepositoryFakeTests.swift; sourceTree = "<group>"; };
 		FAD453291D285D7200217BB2 /* WhiteboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardTests.swift; sourceTree = "<group>"; };
-		FAD740861D308AB800A383BA /* WhiteboardRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardRepositoryTests.swift; sourceTree = "<group>"; };
+		FAD740AD1D31330F00A383BA /* WhiteboardContractTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WhiteboardContractTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD740B11D31330F00A383BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD740B71D31339E00A383BA /* WhiteboardRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteboardRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +72,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAD740A91D31330F00A383BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD740C11D31382200A383BA /* Whiteboard.framework in Frameworks */,
+				FA5037331D313F610039E245 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA50372A1D313BF10039E245 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				FA50372B1D313C080039E245 /* XCTest */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		FA50372B1D313C080039E245 /* XCTest */ = {
+			isa = PBXGroup;
+			children = (
+				FA50372C1D313C1E0039E245 /* macOS */,
+			);
+			path = XCTest;
+			sourceTree = "<group>";
+		};
+		FA50372C1D313C1E0039E245 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
 		FAD452B91D28587000217BB2 = {
 			isa = PBXGroup;
 			children = (
 				FAD452C51D28587000217BB2 /* Whiteboard */,
 				FAD452D11D28587000217BB2 /* WhiteboardTests */,
+				FAD740AE1D31330F00A383BA /* WhiteboardContractTests */,
 				FAD452C41D28587000217BB2 /* Products */,
 				FAD7407F1D30897D00A383BA /* Frameworks */,
 			);
@@ -84,6 +123,7 @@
 			children = (
 				FAD452C31D28587000217BB2 /* Whiteboard.framework */,
 				FAD452CD1D28587000217BB2 /* WhiteboardTests.xctest */,
+				FAD740AD1D31330F00A383BA /* WhiteboardContractTests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,7 +142,6 @@
 		FAD452D11D28587000217BB2 /* WhiteboardTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAD740851D308A9F00A383BA /* Contracts */,
 				FAD453161D285BA000217BB2 /* Entities */,
 				FAD453171D285BB100217BB2 /* Fakes */,
 				FAD4530F1D285AEC00217BB2 /* UseCases */,
@@ -168,18 +207,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FAD740851D308A9F00A383BA /* Contracts */ = {
+		FAD740AE1D31330F00A383BA /* WhiteboardContractTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAD740861D308AB800A383BA /* WhiteboardRepositoryTests.swift */,
+				FA5037321D313F610039E245 /* XCTest.framework */,
+				FA50372A1D313BF10039E245 /* Dependencies */,
+				FAD740B11D31330F00A383BA /* Info.plist */,
+				FAD740B71D31339E00A383BA /* WhiteboardRepositoryTests.swift */,
 			);
-			path = Contracts;
+			path = WhiteboardContractTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
 		FAD452C01D28587000217BB2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD740AA1D31330F00A383BA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +274,24 @@
 			productReference = FAD452CD1D28587000217BB2 /* WhiteboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FAD740AC1D31330F00A383BA /* WhiteboardContractTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD740B21D31330F00A383BA /* Build configuration list for PBXNativeTarget "WhiteboardContractTests" */;
+			buildPhases = (
+				FAD740A81D31330F00A383BA /* Sources */,
+				FAD740A91D31330F00A383BA /* Frameworks */,
+				FAD740AA1D31330F00A383BA /* Headers */,
+				FAD740AB1D31330F00A383BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhiteboardContractTests;
+			productName = WhiteboardContractTests;
+			productReference = FAD740AD1D31330F00A383BA /* WhiteboardContractTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -245,6 +312,13 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
+					FAD740AC1D31330F00A383BA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = CG7Z8Q45GH;
+						DevelopmentTeamName = "Alexander Basson";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = FAD452BD1D28587000217BB2 /* Build configuration list for PBXProject "Whiteboard" */;
@@ -261,6 +335,7 @@
 			targets = (
 				FAD452C21D28587000217BB2 /* Whiteboard */,
 				FAD452CC1D28587000217BB2 /* WhiteboardTests */,
+				FAD740AC1D31330F00A383BA /* WhiteboardContractTests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,6 +349,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FAD452CB1D28587000217BB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD740AB1D31330F00A383BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -300,14 +382,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD453201D285C8100217BB2 /* Whiteboard.swift in Sources */,
-				FAD740871D308AB800A383BA /* WhiteboardRepositoryTests.swift in Sources */,
 				FAD453261D285CD800217BB2 /* WhiteboardRepositoryFake.swift in Sources */,
 				FAD453281D285D2A00217BB2 /* WhiteboardRepositoryFakeTests.swift in Sources */,
+				FAD740C31D31386400A383BA /* WhiteboardRepositoryTests.swift in Sources */,
 				FAD453121D285B0A00217BB2 /* CreateWhiteboardTests.swift in Sources */,
 				FAD4532A1D285D7200217BB2 /* WhiteboardTests.swift in Sources */,
 				FAD4531D1D285C1D00217BB2 /* WhiteboardRepository.swift in Sources */,
 				FAD4531A1D285C0600217BB2 /* Gui.swift in Sources */,
 				FAD453231D285C9E00217BB2 /* CreateWhiteboard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD740A81D31330F00A383BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD740B81D31339E00A383BA /* WhiteboardRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +581,60 @@
 			};
 			name = Release;
 		};
+		FAD740B31D31330F00A383BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WhiteboardContractTests",
+					"$(PROJECT_DIR)/WhiteboardContractTests/XCTest.framework",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = WhiteboardContractTests/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.WhiteboardContractTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FAD740B41D31330F00A383BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WhiteboardContractTests",
+					"$(PROJECT_DIR)/WhiteboardContractTests/XCTest.framework",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = WhiteboardContractTests/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conditionallyconvergent.WhiteboardContractTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -517,6 +661,15 @@
 			buildConfigurations = (
 				FAD452DB1D28587000217BB2 /* Debug */,
 				FAD452DC1D28587000217BB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD740B21D31330F00A383BA /* Build configuration list for PBXNativeTarget "WhiteboardContractTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD740B31D31330F00A383BA /* Debug */,
+				FAD740B41D31330F00A383BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,4 +1,5 @@
 import XCTest
+@testable import Whiteboard
 
 class WhiteboardRepositoryTests: XCTestCase {
   var repo: WhiteboardRepository?
