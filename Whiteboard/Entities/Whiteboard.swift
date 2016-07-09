@@ -1,21 +1,43 @@
-public final class Whiteboard {
-    public let name: String
-    public var id: String?
+import Foundation
 
-    public init(name: String) {
-        self.name = name
-    }
+public final class Whiteboard: NSObject, NSCoding {
+  public let name: String
+  public var id: String?
 
-    init(name: String, id: String) {
-        self.name = name
-        self.id = id
+  public init(name: String) {
+    self.name = name
+  }
+
+  public init(name: String, id: String) {
+    self.name = name
+    self.id = id
+  }
+
+  struct Keys {
+    static let ID = "id"
+    static let Name = "name"
+  }
+
+  public func encode(with archiver: NSCoder) {
+    archiver.encode(name, forKey: Keys.Name)
+    if let id = id {
+      archiver.encode(id, forKey: Keys.ID)
     }
+  }
+
+  required convenience public init(coder unarchiver: NSCoder) {
+    let name = unarchiver.decodeObject(forKey: Keys.Name) as! String
+    if let id = unarchiver.decodeObject(forKey: Keys.ID) as? String {
+      self.init(name: name, id: id)
+    } else {
+      self.init(name: name)
+    }
+  }
+
 }
 
-extension Whiteboard: Equatable {}
-
 public func ==(lhs: Whiteboard, rhs: Whiteboard) -> Bool {
-    return lhs.id == rhs.id && lhs.name == rhs.name
+  return lhs.id == rhs.id && lhs.name == rhs.name
 }
 
 public enum WhiteboardField {
