@@ -14,6 +14,12 @@ class WhiteboardRepositoryTests: XCTestCase {
     }
   }
 
+  func testItReturnsAllWhiteboards() {
+    if let repo = repo {
+      XCTAssertEqual(repo.all(), [ny, sf])
+    }
+  }
+
   func testItFindsByName() {
     if let repo = repo {
       if let foundWhiteboard = repo.find(name: ny.name) {

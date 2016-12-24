@@ -48,7 +48,7 @@ public func==(lhs: ValidationConstraint, rhs: ValidationConstraint) -> Bool {
   }
 }
 
-public enum WhiteboardError: ErrorProtocol {
+public enum WhiteboardError: Error {
   case Validation(field: WhiteboardField, validation: ValidationConstraint)
   case Update
   case Destroy
